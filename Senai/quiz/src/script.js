@@ -8,10 +8,16 @@ var tela = document.getElementById('tela')
         var res = document.getElementById('res')
         var text = document.getElementById('text')
         var progresso = document.getElementById('progresso')
+        var corpo = document.getElementById('corpo')
+        var audioErrado = document.getElementById('errado')
 
+        function playErrado(){
+            audioErrado.play();
+        }
         function clickPic(){
             tela.style.display = 'none'
             Primeira.style.display = 'flex'
+            corpo.style.display = 'block'
         }
 
         function Pergunta1(params) {
@@ -20,13 +26,13 @@ var tela = document.getElementById('tela')
                 correto++
                 Primeira.style.display = 'none'
                 Segunda.style.display = 'block'
-                text.innerHTML = `<h2>Mico leão Pintudo</h2>`
+                text.innerHTML = `<h2 style="font-weight: bolder;">Mico leão Pintudo</h2>`
             }else{
-                alert('Resposta Errada!')
+                audioErrado.play();
                 errado++
                 Primeira.style.display = 'none'
                 Segunda.style.display = 'block'
-                text.innerHTML = `<h2>Mico leão Pintudo</h2>`
+                text.innerHTML = `<h2 style="font-weight: bolder;">Mico leão Pintudo</h2>`
             }
             atualizarProgresso()
         }
@@ -37,14 +43,14 @@ var tela = document.getElementById('tela')
                 correto++
                 Segunda.style.display = 'none'
                 Tereceira.style.display = 'block'
-                text.innerHTML = `<h2>Mico leão tetudo</h2>`
+                text.innerHTML = `<h2 style="font-weight: bolder;">Mico leão tetudo</h2>`
 
             }else{
-                alert('Resposta Errada!')
+                playErrado()
                 errado++
                 Segunda.style.display = 'none'
                 Tereceira.style.display = 'block'
-                text.innerHTML = `<h2>Mico leão tetudo</h2>`
+                text.innerHTML = `<h2 style="font-weight: bolder;">Mico leão tetudo</h2>`
             }
             atualizarProgresso()
         }
@@ -55,14 +61,14 @@ var tela = document.getElementById('tela')
                 correto++
                 Tereceira.style.display = 'none'
                 Quarto.style.display = 'block'
-                text.innerHTML = `<h2>Mico leão bombastico</h2>`
+                text.innerHTML = `<h2 style="font-weight: bolder;">Mico leão bombastico</h2>`
 
             }else{
-                alert('Resposta Errada!')
+                playErrado()
                 errado++
                 Tereceira.style.display = 'none'
                 Quarto.style.display = 'block'
-                text.innerHTML = `<h2>Mico leão bombastico</h2>`
+                text.innerHTML = `<h2 style="font-weight: bolder;">Mico leão bombastico</h2>`
             }
             atualizarProgresso()
         }
@@ -73,13 +79,13 @@ var tela = document.getElementById('tela')
                 correto++
                 Quarto.style.display = 'none'
                 res.style.display = 'block'
-                res.innerHTML = `<h1>Sua Quantidade de Acertos é ${correto}/4</h1>`
+                res.innerHTML = `<h1 style="font-weight: bolder;">Sua Quantidade de Acertos é ${correto}/4</h1>`
                 text.innerHTML = ''
 
             }else{
-                alert('Resposta Errada!')
+                playErrado()
                 errado++
-                res.innerHTML = `<h1>Sua Quantidade de Acertos é ${correto}/4</h1>`
+                res.innerHTML = `<h1 style="font-weight: bolder;">Sua Quantidade de Acertos é ${correto}/4</h1>`
                 Quarto.style.display = 'none'
                 res.style.display = 'block'
                 text.innerHTML = ''
