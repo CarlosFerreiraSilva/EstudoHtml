@@ -9,15 +9,27 @@
 </head>
 <body class="body">
 
-    <div class="telaInicial" id="tela">
-        <div class="card text-center" style="background-color: antiquewhite;">
+    <audio id="erradoAudio" src="/audio/Errado.mp4"></audio>
+    <audio id="corretoAudio" src="/audio/Correto.mp4"></audio>
+
+    <div class="telaInicial" id="tela" style="width: 40%; height: 100%;">
+        <div class="card border-danger text-center" style="background-color: #0f2020; color: white; box-shadow: 6px 6px #040808;
+">
             <div class="card-header">
               Featured
             </div>
             <div class="card-body">
-              <h5 class="card-title" style="font-weight: bolder;">Quiz sobre Carl Von Linneu</h5>
-              <p class="card-text">bla bla</p>
-              <a href="#" id="inicio" onclick="clickPic()" class="btn btn-success">Jogar</a>
+              <h5 class="card-title" style="font-weight: bolder;">Quiz sobre Carl von Linné</h5>
+              <p class="card-text" style=" font-weight: 100;">Bem-vindo ao Quiz sobre Carl von Linné, também conhecido como Carolus Linnaeus! Este quiz foi elaborado para testar o seu conhecimento sobre a vida, obra e contribuições desse renomado cientista sueco.</p>
+              <a href="#" id="inicio" onclick="clickPic()">
+                <button class="button-82-pushable" role="button">
+                    <span class="button-82-shadow"></span>
+                    <span class="button-82-edge"></span>
+                    <span class="button-82-front text">
+                      Jogar
+                    </span>
+                  </button>
+            </a>
             </div>
           </div>
     </div>
@@ -27,7 +39,7 @@
     <div id="corpo" class="corpo" >
 
     <div >
-        <h2 class="text" id="text" style="font-weight: bolder;">adka[po]s~kaos</h2>
+        <h2 class="texto" id="text" style="font-weight: bolder;">1. Quem é Carl von Linné?</h2>
     </div>
         
 
@@ -35,19 +47,19 @@
         <div class="options" id="Primeira">
 
             <div class="escolhas" onclick="Pergunta1(1)">
-                <h3 style="font-weight: bolder;">dadasda</h3>
+                <h3 style="font-weight: bolder;"> Um influente cientista sueco, pioneiro na classificação de seres vivos.</h3>
             </div>
     
             <div class="escolhas" onclick="Pergunta1(0)">
-                <h3 style="font-weight: bolder;">dasdadasd</h3>
+                <h3 style="font-weight: bolder;">Um famoso explorador medieval.</h3>
             </div>
     
             <div class="escolhas" onclick="Pergunta1(0)">
-                <h3 style="font-weight: bolder;">asdsdada</h3>
+                <h3 style="font-weight: bolder;">Um líder militar da Revolução Industrial.</h3>
             </div>
     
             <div class="escolhas" onclick="Pergunta1(0)">
-                <h3 style="font-weight: bolder;">adasdadsad</h3>
+                <h3 style="font-weight: bolder;">Um renomado compositor clássico.</h3>
             </div>
     </div>
 
@@ -55,19 +67,19 @@
         <div class="aa" style="display: flex; justify-content: center; align-items: center;">
             
             <div class="escolhas" onclick="Pergunta2(0)">
-                <h3 style="font-weight: bolder;">Miguel</h3>
+                <h3 style="font-weight: bolder;"> Um método de cultivo de plantas em laboratório.</h3>
             </div>
 
             <div class="escolhas" onclick="Pergunta2(0)">
-                <h3 style="font-weight: bolder;">é</h3>
+                <h3 style="font-weight: bolder;">Um estilo de pintura renascentista.</h3>
             </div>
 
             <div class="escolhas" onclick="Pergunta2(0)">
-                <h3 style="font-weight: bolder;">Viado</h3>
+                <h3 style="font-weight: bolder;">Uma teoria sobre a formação de estrelas no universo.</h3>
             </div>
 
             <div class="escolhas" onclick="Pergunta2(1)">
-                <h3 style="font-weight: bolder;">👌</h3>
+                <h3 style="font-weight: bolder;">Um sistema de classificação e organização dos seres vivos com base em características comuns.</h3>
             </div>
         </div>
 </div>
@@ -76,19 +88,19 @@
     <div class="aa" style="display: flex; justify-content: center; align-items: center;">
         
         <div class="escolhas" onclick="Pergunta3(0)">
-            <h3 style="font-weight: bolder;">Voce</h3>
+            <h3 style="font-weight: bolder;">Gênero.</h3>
         </div>
 
         <div class="escolhas" onclick="Pergunta3(0)">
-            <h3 style="font-weight: bolder;">é</h3>
+            <h3 style="font-weight: bolder;">Filo.</h3>
         </div>
 
         <div class="escolhas" onclick="Pergunta3(0)">
-            <h3 style="font-weight: bolder;">Broxa</h3>
+            <h3 style="font-weight: bolder;">Família.</h3>
         </div>
 
         <div class="escolhas" onclick="Pergunta3(1)">
-            <h3 style="font-weight: bolder;">🍆</h3>
+            <h3 style="font-weight: bolder;">Classe.</h3>
         </div>
     </div>
 </div>
@@ -97,25 +109,25 @@
     <div class="aa" style="display: flex; justify-content: center; align-items: center;">
         
         <div class="escolhas" onclick="Pergunta4(0)">
-            <h3 style="font-weight: bolder;">Mario</h3>
+            <h3 style="font-weight: bolder;"> Aves.</h3>
         </div>
 
         <div class="escolhas" onclick="Pergunta4(0)">
-            <h3 style="font-weight: bolder;">é</h3>
+            <h3 style="font-weight: bolder;">Anfíbios.</h3>
         </div>
 
         <div class="escolhas" onclick="Pergunta4(1)">
-            <h3 style="font-weight: bolder;">Baitola</h3>
+            <h3 style="font-weight: bolder;">Répteis.</h3>
         </div>
 
         <div class="escolhas" onclick="Pergunta4(0)">
-            <h3 style="font-weight: bolder;">🐒</h3>
+            <h3 style="font-weight: bolder;">Aracnídeos.</h3>
         </div>
     </div>
 </div>
 
 <div id="res" style="display: none; text-align: center; color: white;">
-    <h1 style="font-weight: bolder;">Parabens seu resultado é </h1>
+    <h3 style="font-weight: bolder;">Parabens seu resultado é </h1>
 </div>
 
 <div id="progresso" style="display: flex; align-items: center; justify-content: center; width: 100%; height: 50px; display: none;">
@@ -129,9 +141,12 @@
           </div>
 </div>
 
-    </div>
+<div class="gabarito">
+
+</div>
+</div>
    
-<audio src="Errado.mp4"></audio>
+
 
     <script src="src/script.js"></script>
 </body>

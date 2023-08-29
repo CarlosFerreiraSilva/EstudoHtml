@@ -9,10 +9,17 @@ var tela = document.getElementById('tela')
         var text = document.getElementById('text')
         var progresso = document.getElementById('progresso')
         var corpo = document.getElementById('corpo')
-        var audioErrado = document.getElementById('errado')
+        var audioErrado = document.getElementById('erradoAudio')
+        var audioCorreto = document.getElementById('corretoAudio')
 
         function playErrado(){
+            audioErrado.currentTime = 0.6;
             audioErrado.play();
+        }
+
+        function playCorreto(){
+            audioCorreto.currentTime = 0.2;
+            audioCorreto.play();
         }
         function clickPic(){
             tela.style.display = 'none'
@@ -22,60 +29,64 @@ var tela = document.getElementById('tela')
 
         function Pergunta1(params) {
             if (params == 1) {
-                alert('Resposta Correta!')
+                playCorreto()
                 correto++
                 Primeira.style.display = 'none'
                 Segunda.style.display = 'block'
-                text.innerHTML = `<h2 style="font-weight: bolder;">Mico leão Pintudo</h2>`
+                text.innerHTML = `<h2 style="font-weight: bolder;">
+                2. O que é taxonomia?</h2>`
             }else{
-                audioErrado.play();
+                playErrado()
                 errado++
                 Primeira.style.display = 'none'
                 Segunda.style.display = 'block'
-                text.innerHTML = `<h2 style="font-weight: bolder;">Mico leão Pintudo</h2>`
+                text.innerHTML = `<h2 style="font-weight: bolder;">
+                2. O que é taxonomia?</h2>`
             }
             atualizarProgresso()
         }
 
         function Pergunta2(params) {
             if (params == 1) {
-                alert('Resposta Correta!')
+                playCorreto()
                 correto++
                 Segunda.style.display = 'none'
                 Tereceira.style.display = 'block'
-                text.innerHTML = `<h2 style="font-weight: bolder;">Mico leão tetudo</h2>`
+                text.innerHTML = `<h2 style="font-weight: bolder;">3. Na classificação científica de animais, qual termo é 
+                utilizado para representar uma categoria imediatamente acima da ordem e agrupa várias ordens relacionadas?</h2>`
 
             }else{
                 playErrado()
                 errado++
                 Segunda.style.display = 'none'
                 Tereceira.style.display = 'block'
-                text.innerHTML = `<h2 style="font-weight: bolder;">Mico leão tetudo</h2>`
+                text.innerHTML = `<h2 style="font-weight: bolder;">3. Na classificação científica de animais, qual termo é utilizado para representar uma categoria imediatamente 
+                acima da ordem e agrupa várias ordens relacionadas?</h2>`
             }
             atualizarProgresso()
         }
 
         function Pergunta3(params) {
             if (params == 1) {
-                alert('Resposta Correta!')
+                playCorreto()
                 correto++
                 Tereceira.style.display = 'none'
                 Quarto.style.display = 'block'
-                text.innerHTML = `<h2 style="font-weight: bolder;">Mico leão bombastico</h2>`
+                text.innerHTML = `<h2 style="font-weight: bolder;">4.  Qual classe de organismos foi a primeira a conquistar completamente o ambiente terrestre?</h2>`
 
             }else{
                 playErrado()
                 errado++
                 Tereceira.style.display = 'none'
                 Quarto.style.display = 'block'
-                text.innerHTML = `<h2 style="font-weight: bolder;">Mico leão bombastico</h2>`
+                text.innerHTML = `<h2 style="font-weight: bolder;">4. Qual classe de organismos foi a primeira a conquistar completamente o ambiente terrestre?</h2>`
             }
             atualizarProgresso()
         }
 
         function Pergunta4(params) {
             if (params == 1) {
-                alert('Resposta Correta!')
+                playCorreto()
                 correto++
                 Quarto.style.display = 'none'
                 res.style.display = 'block'
@@ -109,7 +120,3 @@ var tela = document.getElementById('tela')
             progressSegmentTwo.style.width = widthIncrementErrado + "%";
             progressSegmentTwo.setAttribute("aria-valuenow", widthIncrementErrado);
         }
-    
-        // Chamando a função de aumento do correto para simular o aumento
-        // Você pode chamar essa função sempre que necessário para aumentar o correto
-        aumentarcorreto();
