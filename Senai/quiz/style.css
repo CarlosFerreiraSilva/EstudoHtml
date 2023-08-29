@@ -7,7 +7,7 @@ html,body{
 
 .body{
     background-image: url('https://cdn.pixabay.com/photo/2016/12/29/18/44/background-1939128_1280.jpg');
-    overflow: hidden;
+    
 }
 
 .text{
@@ -30,6 +30,8 @@ html,body{
     gap: 10px;
     margin-top: 40px;
 }
+
+
 .escolhas{
     width: 400px;
     height: 400px;
@@ -44,6 +46,29 @@ html,body{
     cursor: pointer;
 }
 
+<<<<<<< HEAD
 .escolhas:hover{
     background: rgba(255, 255, 255, 0.3);
 }
+=======
+
+
+
+
+@media (max-width: 600px) {
+    .options{
+        flex-direction: column;
+    }
+    .escolhas{
+        width: 300px;
+        height: 200px;
+ 
+    }
+
+    .aa{
+    flex-direction: column;
+    }
+
+  }
+  
+>>>>>>> af5e2f065fe619ecef7e3f0bee9add1d5258831c
