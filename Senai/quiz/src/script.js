@@ -11,6 +11,8 @@ var tela = document.getElementById('tela')
         var corpo = document.getElementById('corpo')
         var audioErrado = document.getElementById('erradoAudio')
         var audioCorreto = document.getElementById('corretoAudio')
+        var rank = document.getElementById('rank')
+        var img = document.getElementById('img')
 
         function playErrado(){
             audioErrado.currentTime = 0.6;
@@ -90,6 +92,7 @@ var tela = document.getElementById('tela')
                 correto++
                 Quarto.style.display = 'none'
                 res.style.display = 'block'
+                rank.style.display = 'flex'
                 res.innerHTML = `<h1 style="font-weight: bolder;">Sua Quantidade de Acertos é ${correto}/4</h1>`
                 text.innerHTML = ''
 
@@ -99,9 +102,23 @@ var tela = document.getElementById('tela')
                 res.innerHTML = `<h1 style="font-weight: bolder;">Sua Quantidade de Acertos é ${correto}/4</h1>`
                 Quarto.style.display = 'none'
                 res.style.display = 'block'
+                rank.style.display = 'flex'
                 text.innerHTML = ''
             }
+            corpo.style.width = '60%'
             progresso.style.display = 'flex'
+
+            if(correto < 1){
+                img.setAttribute('src', '/images/rank1.png');
+        } else if (correto == 1){
+            img.setAttribute('src', '/images/rank2.jpg');
+        } else if (correto == 2){
+            img.setAttribute('src', '/images/rank3.jpg');
+        } else if (correto == 3){
+            img.setAttribute('src', '/images/rank4.jpg');
+        }else{
+            img.setAttribute('src', '/images/rank5.jpg');
+        }
             atualizarProgresso()
         }
 
